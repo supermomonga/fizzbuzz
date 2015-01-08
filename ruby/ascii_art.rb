@@ -1,10 +1,6 @@
 __,__,f,i,z,z,__,__,b,u,z,z,__,__=DATA.map(&method(:eval)).map(&:size)
 _=([_]*i).map(&:to_i).inject(&:**) if !_
 
-# f = 10
-# i = 2
-# _ = 0
-
 F        = (f* i+z+z+b+u+z+z) *(i**i*i-_)/i
   I      = (f**i+z+z+b+u+z+z) +i**i+_
     Z    = (f**i+z+z+b+u+z+z) +f*i+i
