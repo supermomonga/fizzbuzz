@@ -10,7 +10,7 @@ B        = (f* i+z+z+b+u+z+z) *(i**i*i-_)/i-i**i
     Z
       Z
 
-[[F,I,Z,Z],[B,U,Z,Z]].map{|_|_.pack('c*')}.tap{|(fizz,buzz)|
+[[F,I,Z,Z],[B,U,Z,Z]].map{|_|_.pack('c*')}.tap{|fizz,buzz|
   ((([[f,i,z,z,b,u,z,z].inject(&:*)]*i).inject(&:**))..(f**i+z+z+b+u+z+z)).map{|fizzbuzz|
     case [F,i,z,z,B,u,z,z].inject(&:*)
     when fizzbuzz %(f+f/i)  then [fizz,buzz].inject(&:+)
