@@ -12,7 +12,7 @@ B        = (f* i+z+z+b+u+z+z) *(i**i*i-i**z)/i-i**i
   when fizzbuzz %(f+f/i)     then [F,I,Z,Z,B,U,Z,Z]
   when fizzbuzz %(i+i**z)    then [F,I,Z,Z]
   when fizzbuzz %(i**i+i**z) then [B,U,Z,Z]
-  else fizzbuzz.to_s.chars.map(&:to_i).map &(f**i/i-i).method(:+)
+  else (% %s % fizzbuzz).chars.map(&:to_i).map &(f**i/i-i).method(:+)
   end.pack 'c*'
 }.map &method(:puts)
 __END__
