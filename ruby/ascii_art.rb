@@ -10,16 +10,14 @@ B        = (f* i+z+z+b+u+z+z) *(i**i*i-_)/i-i**i
     Z
       Z
 
-[[F,I,Z,Z],[B,U,Z,Z]].map{|_|_.pack('c*')}.tap{|fizz,buzz|
-  ((([[f,i,z,z,b,u,z,z].inject(&:*)]*i).inject(&:**))..(f**i+z+z+b+u+z+z)).map{|fizzbuzz|
-    case [F,i,z,z,B,u,z,z].inject(&:*)
-    when fizzbuzz %(f+f/i)  then [fizz,buzz].inject(&:+)
-    when fizzbuzz %(i+_)    then fizz
-    when fizzbuzz %(i**i+_) then buzz
-    else fizzbuzz
-    end
-  }.map(&method(:puts))
-}
+((([[f,i,z,z,b,u,z,z].inject(&:*)]*i).inject(&:**))..(f**i+z+z+b+u+z+z)).map{|fizzbuzz|
+  case [F,i,z,z,B,u,z,z].inject(&:*)
+  when fizzbuzz %(f+f/i)  then [F,I,Z,Z,B,U,Z,Z]
+  when fizzbuzz %(i+_)    then [F,I,Z,Z]
+  when fizzbuzz %(i**i+_) then [B,U,Z,Z]
+  else fizzbuzz.to_s.chars.map(&:to_i).map &(f**i/i-i).method(:+)
+  end.pack 'c*'
+}.map(&method(:puts))
 __END__
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
