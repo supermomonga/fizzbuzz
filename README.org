@@ -1,0 +1,4 @@
+
+* Writing FizzBuzz
+
+Is good way for me to understand programming languages deeply.
